@@ -67,9 +67,7 @@ while len(Processes) != 0:
     #Line 65: Block has been occupied, can no longer be used by next process
     elif len(Can_Fit) >= 1:
         Sorted_Can_Fit = sorted(Can_Fit)
-        print(Sorted_Can_Fit)
         Sorted_Can_Fit.sort(reverse=True)
-        print(Sorted_Can_Fit)
         worst_fit_index = Memory_Partitions_Copy.index(Sorted_Can_Fit[0])
         Order.append(str(Processes[0]) + ": Partition " + str(worst_fit_index+1))
         Processes.pop(0)
