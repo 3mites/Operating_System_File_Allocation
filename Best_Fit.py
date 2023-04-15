@@ -50,16 +50,17 @@ while len(Processes) != 0:
 
 
     #Process can fit to x amount of memory block, can fit
-    #Line 61: Sorting the difference list, first index would be the best fit for the process
-    #Line 62: Get the index/Partition Number of the best fit memory block
-    #Line 64: Process succesfully allocated, move on to next process
-    #Line 65: Block has been occupied, can no longer be used by next process
+    #Line 58: Sorting the difference list, first index would be the best fit for the process
+    #Line 59: Get the index/Partition Number of the best fit memory block
+    #Line 61: Process succesfully allocated, move on to next process
+    #Line 62: Block has been occupied, can no longer be used by next process
     elif len(Can_Fit) >= 1:
         Sorted_Can_Fit = sorted(Can_Fit)
         best_fit_index = Memory_Partitions_Copy.index(Sorted_Can_Fit[0])
         Order.append(str(Processes[0]) + ": Partition " + str(best_fit_index+1))
         Processes.pop(0)
-        Memory_Partitions.pop(best_fit_index)
+        Memory_Partitions.pop(0)
+
 
     #reinitializing evaluation
     counter = 0
@@ -69,4 +70,3 @@ while len(Processes) != 0:
 
 for x in range(0, len(Order)):
     print(Order[x])
-
