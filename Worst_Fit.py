@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[4]:
-
-
 #Worst Fit
 
 Dimension = int(input("How many Partitions: "))
@@ -62,10 +56,10 @@ while len(Processes) != 0:
 
 
     #Process can fit to x amount of memory block, can fit
-    #Line 61: Sorting the difference list, first index would be the best fit for the process
-    #Line 62: Get the index/Partition Number of the best fit memory block
-    #Line 64: Process succesfully allocated, move on to next process
-    #Line 65: Block has been occupied, can no longer be used by next process
+    #Line 64-65: Sorting the difference list and reversing it, first index would be the worst fit for the process
+    #Line 66: Get the index/Partition Number of the worst fit memory block
+    #Line 68: Process succesfully allocated, move on to next process
+    #Line 69: Block has been occupied, can no longer be used by next process
     elif len(Can_Fit) >= 1:
         Sorted_Can_Fit = sorted(Can_Fit)
         Sorted_Can_Fit.sort(reverse=True)
@@ -82,10 +76,3 @@ while len(Processes) != 0:
 
 for x in range(0, len(Order)):
     print(Order[x])
-
-
-# In[ ]:
-
-
-
-

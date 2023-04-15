@@ -49,7 +49,6 @@ while len(Processes) != 0:
         Order.append(str(Processes[0]) + " No Allocation")
         Processes.pop(0)
 
-
     #Process can fit to x amount of memory block, can fit
     #Line 58: Sorting the difference list, first index would be the best fit for the process
     #Line 59: Get the index/Partition Number of the best fit memory block
