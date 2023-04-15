@@ -22,6 +22,7 @@ for x in range(0, Dimension):
     Partitions_Prompt = int(input("Enter Partition {}: ".format(Partition_Count + 1)))
     Memory_Partitions.append(Partitions_Prompt)
     Partition_Count += 1
+print("\n")
 
 for x in range(0, Amount_Process):
     Processes_Prompt = int(input("Enter Process {}: ".format(Process_Count + 1)))
